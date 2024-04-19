@@ -1,7 +1,7 @@
 export const navItems = [
   {
     id: 1,
-    label: "Home",
+    label: "Who we are",
     to: "/",
   },
   {
@@ -11,8 +11,8 @@ export const navItems = [
   },
   {
     id: 3,
-    label: "About",
-    to: "/about",
+    label: "Gallery",
+    to: "/gallery",
   },
   {
     id: 4,
@@ -31,6 +31,11 @@ export const navItems = [
   },
   {
     id: 7,
+    label: "About Us",
+    to: "/about",
+  },
+  {
+    id: 8,
     label: "Contact",
     to: "/contact",
   },

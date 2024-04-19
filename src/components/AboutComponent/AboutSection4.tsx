@@ -1,7 +1,7 @@
 import { Container, Flex, Text, useMediaQuery } from "@chakra-ui/react";
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
-import { IDDTLData } from "../../data/AboutData";
+import { IDDTLData } from "../../assets/About";
 
 export const AboutSection4 = () => {
   const [isLessThan300] = useMediaQuery("(max-width: 300px)");

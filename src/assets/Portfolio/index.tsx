@@ -1,9 +1,11 @@
-import Eshha from "../../assets/portfolioImages/eshha.png";
-import Yogtirtha from "../../assets/portfolioImages/yogtirtha.png";
+import Eshha from "./portfolioImages/eshha.png";
+import Lincoln from "./portfolioImages/lincoln.png";
+import Yogtirtha from "./portfolioImages/yogtirtha.png";
 export const PortfolioData = [
   {
     id: 1,
     title: "Yogtirtha Website",
+    slug: "yogtirtha",
     description:
       "Yogtirtha rightly conveys a perfect atmosphere of mysticism having jungle, sufficient water resource and gigantic view of mountain.A clear and engaging title that captures the essence of the website project.",
 
@@ -45,7 +47,7 @@ export const PortfolioData = [
     title: "Eshha Impex Website",
     description:
       "Eshha Impex is a leading trading house in Nepal dealing in various items. It importing various items from international market and markets in Nepal. A clear and engaging title that captures the essence of the website project.",
-
+    slug: "eshha",
     image: Eshha,
     technology: [
       {
@@ -78,6 +80,8 @@ export const PortfolioData = [
   {
     id: 3,
     title: "Lincoln University Website",
+    slug: "lincoln",
+    image: Lincoln,
     description:
       "Lincoln University rightly conveys a perfect atmosphere of mysticism having jungle, sufficient water resource and gigantic view of mountain. A clear and engaging title that captures the essence of the website project.",
     technology: [

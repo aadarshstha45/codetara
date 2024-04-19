@@ -8,7 +8,8 @@ import {
   SimpleGrid,
   Text,
 } from "@chakra-ui/react";
-import Languages from "../../assets/homeImages/Language.png";
+import { Link } from "react-router-dom";
+import Languages from "../../assets/Home/homeImages/Language.png";
 export const StackSection = () => {
   return (
     <Container maxW={{ base: "95vw", sm: "85vw" }}>
@@ -58,6 +59,9 @@ export const StackSection = () => {
                     designed to meet your unique needs.
                   </Text>
                   <Button
+                    as={Link}
+                    to={"/contact"}
+                    reloadDocument
                     size={"sm"}
                     p={"8px"}
                     mt={4}

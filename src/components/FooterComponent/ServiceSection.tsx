@@ -1,5 +1,5 @@
 import { Flex, Stack, Text, useMediaQuery } from "@chakra-ui/react";
-import { serviceFooterData } from "../../data/FooterData";
+import { serviceFooterData } from "../Footer";
 
 export const ServiceSection = () => {
   const [isLessThan300] = useMediaQuery("(max-width: 300px)");

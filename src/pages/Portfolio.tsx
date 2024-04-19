@@ -11,7 +11,7 @@ import {
   useMediaQuery,
 } from "@chakra-ui/react";
 import { useState } from "react";
-import { PortfolioData } from "../data/PortfolioData";
+import { PortfolioData } from "../assets/Portfolio";
 
 export const Portfolio = () => {
   const [isLessThan750] = useMediaQuery("(max-width: 750px)");
@@ -70,13 +70,15 @@ export const Portfolio = () => {
               hoveredBgColor,
               technology,
               textColor,
+              slug,
               headingTextColor,
             }) => (
               <GridItem colSpan={1} key={id}>
                 <Card
                   p={4}
-                  h={"650px"}
+                  h={{ base: "600px", md: "550px" }}
                   w={"auto"}
+                  overflow={"hidden"}
                   bg={hoveredCard === id ? hoveredBgColor : bgColor}
                   transition={"background-color 1s"}
                   onTouchStart={() => handleToggleHover(id)}
@@ -90,8 +92,6 @@ export const Portfolio = () => {
                     alignSelf={"center"}
                     w={{ base: "100%", md: "90%" }}
                     overflow={"hidden"}
-                    display={"flex"}
-                    flexDir={"column"}
                     gap={5}
                   >
                     <Text
@@ -107,6 +107,7 @@ export const Portfolio = () => {
                       {title}
                     </Text>
                     <Text
+                      mt={4}
                       textColor={textColor}
                       letterSpacing={"0.32px"}
                       fontSize={"16px"}
@@ -114,6 +115,7 @@ export const Portfolio = () => {
                     >
                       {description}
                     </Text>
+
                     <Flex
                       pos={"relative"}
                       justify={hoveredCard === id ? "start" : "center"}
@@ -121,20 +123,26 @@ export const Portfolio = () => {
                       <Box
                         pos={"absolute"}
                         transform={
-                          hoveredCard === id ? "translateX(-150%)" : ""
+                          hoveredCard === id ? "translateX(-170%)" : ""
                         }
-                        top={"20px"}
+                        top={"60px"}
+                        // bottom={0}
                         transition={"transform 0.5s"}
                       >
-                        <Image w={400} src={image} alt={title} />
+                        <Image
+                          w={slug === "lincoln" ? "600px" : 400}
+                          src={image}
+                          alt={title}
+                        />
                       </Box>
 
                       <SimpleGrid
+                        mt={10}
                         pos={"absolute"}
                         transform={
                           hoveredCard === id
                             ? "translateX(0)"
-                            : "translateX(150%)"
+                            : "translateX(170%)"
                         }
                         transition={"transform 0.5s"}
                         justifySelf={"center"}

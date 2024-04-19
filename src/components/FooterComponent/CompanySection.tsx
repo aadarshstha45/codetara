@@ -1,5 +1,5 @@
 import { Flex, Link, Stack, Text, useMediaQuery } from "@chakra-ui/react";
-import { companyFooterData } from "../../data/FooterData";
+import { companyFooterData } from "../Footer";
 
 export const CompanySection = () => {
   const [isLessThan300] = useMediaQuery("(max-width: 300px)");

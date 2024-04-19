@@ -1,20 +1,19 @@
 import { Box, Container, Flex, IconButton, Text } from "@chakra-ui/react";
 import { motion } from "framer-motion";
-import { useNavigate } from "react-router-dom";
-import { PositionIcon } from "../../assets/careerImages";
+import { Link } from "react-router-dom";
+import { PositionData } from "../../assets/Career";
+import { PositionIcon } from "../../assets/Career/careerImages";
 import { RightArrow } from "../../assets/icons";
-import { PositionData } from "../../data/CareerData";
 
 export const CareerSection3 = () => {
-  const navigate = useNavigate();
   return (
     <Box id="positions" py={5}>
       <Container maxW={{ base: "95vw", md: "95vw", lg: "85vw" }}>
         <Flex align={"center"}>
           <Box w={{ base: "full", md: "90%", lg: "80%" }}>
             <Text
-              fontSize={{ base: "36px", sm: "40px", md: "44px", lg: "48px" }}
-              fontWeight={450}
+              fontSize={{ base: "30px", sm: "34px", md: "38px", lg: "42px" }}
+              fontWeight={500}
               textColor={"secondary"}
               textTransform={"capitalize"}
             >
@@ -56,14 +55,14 @@ export const CareerSection3 = () => {
                     {title}
                   </Text>
                   <IconButton
+                    as={Link}
+                    to={`/careers/details/${id}`}
+                    reloadDocument
                     aria-label="View Open Positions"
                     size={{ base: "sm", md: "md" }}
                     bgColor={"#ffffff"}
                     colorScheme={"white"}
                     borderRadius={"full"}
-                    onClick={() => {
-                      navigate("/careers/details");
-                    }}
                     icon={<RightArrow stroke="#000000" />}
                   />
                 </Flex>

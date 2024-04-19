@@ -5,6 +5,8 @@ import { About } from "../pages/About";
 import { CareerDetails } from "../pages/CareerDetails";
 import { Careers } from "../pages/Careers";
 import { Contact } from "../pages/Contact";
+import { Gallery } from "../pages/Gallery";
+import { GalleryDetail } from "../pages/GalleryDetail";
 import Home from "../pages/Home";
 import { OurTeam } from "../pages/OurTeam";
 import { Portfolio } from "../pages/Portfolio";
@@ -33,15 +35,20 @@ export const router = createBrowserRouter([
       },
       {
         path: "/careers",
-        element: <Careers />,
-      },
-      {
-        path: "/careers/details",
-        element: <CareerDetails />,
-      },
-      {
-        path: "/careers/apply",
-        element: <CareerForm />,
+        children: [
+          {
+            path: "/careers",
+            element: <Careers />,
+          },
+          {
+            path: "/careers/details/:id",
+            element: <CareerDetails />,
+          },
+          {
+            path: "/careers/apply",
+            element: <CareerForm />,
+          },
+        ],
       },
       {
         path: "/contact",
@@ -50,6 +57,19 @@ export const router = createBrowserRouter([
       {
         path: "/services",
         element: <Services />,
+      },
+      {
+        path: "/gallery",
+        children: [
+          {
+            path: "/gallery",
+            element: <Gallery />,
+          },
+          {
+            path: "/gallery/:slug",
+            element: <GalleryDetail />,
+          },
+        ],
       },
     ],
   },

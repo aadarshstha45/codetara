@@ -6,7 +6,7 @@ import {
   Text,
   UnorderedList,
 } from "@chakra-ui/react";
-import { CareerDetailData } from "../../data/CareerData";
+import { CareerDetailData } from "../../assets/Career";
 
 export const CareerDetailSection1 = () => {
   return (

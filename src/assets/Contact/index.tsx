@@ -1,8 +1,4 @@
-import {
-  EmailIcon,
-  LocationIcon,
-  PhoneIcon,
-} from "../../assets/icons/inputIcons";
+import { EmailIcon, LocationIcon, PhoneIcon } from "../icons/inputIcons";
 
 export const ContactData = [
   {

@@ -1,6 +1,15 @@
-import { Box, Button, Container, Divider, Flex, Text } from "@chakra-ui/react";
+import {
+  Box,
+  Button,
+  Container,
+  Flex,
+  GridItem,
+  SimpleGrid,
+  Text,
+} from "@chakra-ui/react";
 import { createBrowserHistory } from "history";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
+import { PositionData } from "../assets/Career";
 import {
   CalendarIcon,
   DownRightArrow,
@@ -9,65 +18,59 @@ import {
   UserIcon,
 } from "../assets/icons";
 import { CareerDetailSection1 } from "../components/CareerDetailComponent";
-import { CareerDetailData } from "../data/CareerData";
 
 export const CareerDetails = () => {
+  const { id } = useParams();
+  console.log(id);
   const history = createBrowserHistory();
   const navigate = useNavigate();
+
+  const data = PositionData.find((item) => item.id === parseInt(id!));
+  console.log(data);
+
   return (
     <Flex flexDir={"column"}>
-      {CareerDetailData.slice(0, 1).map(
-        ({
-          id,
-          title,
+      <Box bgGradient={"linear-gradient(270deg, #E0C3E8 0%, #C1CAEF 100%);"}>
+        <Container maxW={{ base: "95vw", md: "85vw" }} py={5}>
+          <Flex flexDir={"column"} gap={4}>
+            <Button
+              // size={{ base: "xs", sm: "sm", md: "md" }}
+              p={0}
+              fontSize={"sm"}
+              w={"fit-content"}
+              variant={"outline"}
+              borderColor={"transparent"}
+              _hover={{ bg: "transparent" }}
+              leftIcon={<LeftArrow />}
+              onClick={() => history.back()}
+            >
+              Back to careers
+            </Button>
+            <Text
+              fontSize={{ base: "20px", sm: "35px", md: "30px", lg: "35px" }}
+              fontWeight={600}
+              lineHeight={"normal"}
+              textTransform={"capitalize"}
+              borderBottom={"2px solid #000"}
+              w={"fit-content"}
+            >
+              {data?.title}
+            </Text>
 
-          location,
-          level,
-          salary,
-          publishedDate,
-          deadlineDate,
-          noOfPositions,
-        }) => (
-          <Box
-            bgGradient={"linear-gradient(270deg, #E0C3E8 0%, #C1CAEF 100%);"}
-            key={id}
-          >
-            <Container maxW={{ base: "95vw", md: "85vw" }} py={5}>
-              <Button
-                p={0}
-                variant={"outline"}
-                borderColor={"transparent"}
-                _hover={{ bg: "transparent" }}
-                leftIcon={<LeftArrow />}
-                onClick={() => history.back()}
-              >
-                Back to careers
-              </Button>
-              <Text
-                fontSize={{ base: "25px", sm: "30px", md: "35px", lg: "40px" }}
-                fontWeight={450}
-                lineHeight={"normal"}
-                textTransform={"capitalize"}
-              >
-                {title}
-              </Text>
-              <Flex
-                gap={{ base: "10px", md: "40px" }}
-                flexWrap={{ base: "wrap", lg: "nowrap" }}
-                justify={"space-between"}
-                align={"center"}
-              >
+            <SimpleGrid columns={{ base: 1, lg: 2 }} gap={4}>
+              <GridItem colSpan={1}>
                 <Flex
-                  gap={{ base: 10, md: 20 }}
-                  flexBasis={{ base: "auto", md: "80%", lg: "40%" }}
+                  justify="start"
+                  flexWrap={{ base: "wrap", sm: "nowrap" }}
+                  gap={{ base: 4, sm: 5, md: 10 }}
                 >
-                  <Box>
+                  <Box order={{ base: 3, sm: 1 }} w={"fit-content"}>
                     <Text
                       fontSize={{
-                        base: "20px",
-                        sm: "22px",
-                        md: "24px",
-                        lg: "28px",
+                        base: "18px",
+                        sm: "20px",
+                        md: "22px",
+                        lg: "24px",
                       }}
                       fontWeight={450}
                     >
@@ -79,16 +82,16 @@ export const CareerDetails = () => {
                         md: "18px",
                       }}
                     >
-                      {location}
+                      {data?.location}
                     </Text>
                   </Box>
-                  <Box>
+                  <Box order={2} ml={{ base: 10, sm: 0 }} w={"fit-content"}>
                     <Text
                       fontSize={{
-                        base: "20px",
-                        sm: "22px",
-                        md: "24px",
-                        lg: "28px",
+                        base: "18px",
+                        sm: "20px",
+                        md: "22px",
+                        lg: "24px",
                       }}
                       fontWeight={450}
                     >
@@ -100,16 +103,16 @@ export const CareerDetails = () => {
                         md: "18px",
                       }}
                     >
-                      {level}
+                      {data?.level}
                     </Text>
                   </Box>
-                  <Box>
+                  <Box order={1} w={"fit-content"}>
                     <Text
                       fontSize={{
-                        base: "20px",
-                        sm: "22px",
-                        md: "24px",
-                        lg: "28px",
+                        base: "18px",
+                        sm: "20px",
+                        md: "22px",
+                        lg: "24px",
                       }}
                       fontWeight={450}
                     >
@@ -121,108 +124,124 @@ export const CareerDetails = () => {
                         md: "18px",
                       }}
                     >
-                      {salary}
+                      {data?.salary}
                     </Text>
                   </Box>
                 </Flex>
+              </GridItem>
+              <GridItem colSpan={1} w={{ base: "full", sm: "fit-content" }}>
                 <Flex
-                  flexBasis={{ base: "auto", md: "80%", lg: "40%" }}
                   //   display={{ base: "none", md: "flex" }}
-                  flexWrap={{ base: "wrap", md: "nowrap" }}
+                  w={"full"}
+                  flexWrap={{ base: "wrap", sm: "nowrap" }}
                   bg={"#FCFCFC"}
                   p={4}
-                  gap={{ base: 4, md: 10 }}
+                  align={"center"}
+                  gap={{ base: 2, sm: 4, md: 6 }}
+                  justify={"space-between"}
                   borderRadius={5}
                 >
                   <Box>
-                    <Text fontSize={{ base: "14px", md: "18px" }}>
+                    <Text
+                      display={{ base: "none", sm: "flex" }}
+                      fontSize={{ base: "14px", md: "16px" }}
+                    >
                       Published Date
                     </Text>
-                    <Flex align={"center"} gap={1}>
+                    <Flex
+                      align={"center"}
+                      gap={1}
+                      flexDir={{ base: "column", sm: "row" }}
+                    >
                       <CalendarIcon />
                       <Text fontSize={{ base: "14px", md: "16px" }}>
-                        {publishedDate}
+                        {data?.publishedDate}
                       </Text>
                     </Flex>
                   </Box>
-                  <Divider
-                    h={"auto"}
-                    borderColor={"#CFCFCF"}
-                    borderWidth={"1px"}
-                    orientation="vertical"
-                  />
-                  <Box>
-                    <Text fontSize={{ base: "14px", md: "16px" }}>
-                      Deadline Date
-                    </Text>
-                    <Flex align={"center"} gap={1}>
-                      <HourGlassIcon />
-                      <Text fontSize={{ base: "14px", md: "14px" }}>
-                        {deadlineDate}
-                      </Text>
-                    </Flex>
-                  </Box>
-                  <Divider
-                    display={{ base: "none", md: "block" }}
-                    h={"auto"}
-                    borderColor={"#CFCFCF"}
-                    borderWidth={"1px"}
-                    orientation="vertical"
-                  />
 
                   <Box>
-                    <Text fontSize={{ base: "14px", md: "16px" }}>
+                    <Text
+                      display={{ base: "none", sm: "flex" }}
+                      fontSize={{ base: "14px", md: "16px" }}
+                    >
                       No of Position/s
                     </Text>
-                    <Flex align={"center"} gap={1}>
+                    <Flex
+                      align={"center"}
+                      gap={1}
+                      flexDir={{ base: "column", sm: "row" }}
+                    >
                       <UserIcon />
                       <Text fontSize={{ base: "14px", md: "14px" }}>
-                        {noOfPositions}
+                        {data?.noOfPositions}
+                      </Text>
+                    </Flex>
+                  </Box>
+
+                  <Box>
+                    <Text
+                      display={{ base: "none", sm: "flex" }}
+                      fontSize={{ base: "14px", md: "16px" }}
+                    >
+                      Deadline Date
+                    </Text>
+                    <Flex
+                      align={"center"}
+                      gap={1}
+                      flexDir={{ base: "column", sm: "row" }}
+                    >
+                      <HourGlassIcon />
+                      <Text fontSize={{ base: "14px", md: "14px" }}>
+                        {data?.deadlineDate}
                       </Text>
                     </Flex>
                   </Box>
                 </Flex>
-              </Flex>
-              <Button
-                variant={"primary"}
-                mt={5}
-                borderRadius={"1px"}
-                rightIcon={<DownRightArrow />}
-                onClick={() => navigate("/careers/apply")}
-              >
-                Apply Now
-              </Button>
+              </GridItem>
+            </SimpleGrid>
 
-              <Flex mt={10} flexDir={"column"} gap={2}>
-                <Text
-                  fontSize={{
-                    base: "20px",
-                    sm: "22px",
-                    md: "24px",
-                    lg: "26px",
-                  }}
-                >
-                  About Company
-                </Text>
-                <Text
-                  fontSize={{
-                    base: "16px",
-                    sm: "18px",
-                    md: "20px",
-                    lg: "22px",
-                  }}
-                >
-                  Here, we build tailored software solutions to propel your
-                  business forward. From concept to execution, we'll help you
-                  soar above the competition with innovative technology stacks
-                  designed to meet your unique needs. Let's elevate your digital
-                  experience together
-                </Text>
-              </Flex>
-            </Container>
-          </Box>
-        )
-      )}
+            <Button
+              variant={"primary"}
+              mt={5}
+              w={"fit-content"}
+              borderRadius={"1px"}
+              rightIcon={<DownRightArrow />}
+              onClick={() => navigate("/careers/apply")}
+            >
+              Apply Now
+            </Button>
+
+            <Flex mt={10} flexDir={"column"} gap={2}>
+              <Text
+                fontSize={{
+                  base: "20px",
+                  sm: "22px",
+                  md: "24px",
+                  lg: "26px",
+                }}
+              >
+                About Company
+              </Text>
+              <Text
+                fontSize={{
+                  base: "16px",
+                  sm: "18px",
+                  md: "20px",
+                  lg: "22px",
+                }}
+              >
+                Here, we build tailored software solutions to propel your
+                business forward. From concept to execution, we'll help you soar
+                above the competition with innovative technology stacks designed
+                to meet your unique needs. Let's elevate your digital experience
+                together
+              </Text>
+            </Flex>
+          </Flex>
+        </Container>
+      </Box>
+
       <CareerDetailSection1 />
     </Flex>
   );

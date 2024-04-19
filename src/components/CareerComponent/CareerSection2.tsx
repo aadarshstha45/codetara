@@ -1,6 +1,14 @@
-import { Box, Card, CardBody, Container, Flex, Text } from "@chakra-ui/react";
+import {
+  Box,
+  Card,
+  CardBody,
+  Container,
+  Divider,
+  Flex,
+  Text,
+} from "@chakra-ui/react";
 import { useState } from "react";
-import { ApplicationData } from "../../data/CareerData";
+import { ApplicationData } from "../../assets/Career";
 
 export const CareerSection2 = () => {
   const [hovered, setHovered] = useState<number | null>(null);
@@ -42,24 +50,16 @@ export const CareerSection2 = () => {
                 transform={hovered === id ? "translateY(-10px)" : ""}
               >
                 <Box pos={"relative"}>
-                  <Flex
-                    align={"center"}
-                    borderBottom={"0.2px solid #F05B2D"}
-                    borderBottomRadius={"1px"}
-                    borderBottomWidth={"3px"}
-                    transition={"all 0.3s"}
-                    w={hovered === id ? "max-content" : "39px"}
-                    mb={4}
-                  >
+                  <Flex align={"center"} mb={4}>
                     <Text
                       textColor={"primary"}
-                      fontSize={"40px"}
+                      fontSize={{ base: "32px", md: "40px" }}
                       fontWeight={"bold"}
                     >
                       {id}
                     </Text>
                     <Text
-                      fontSize={"28px"}
+                      fontSize={{ base: "24px", md: "28px" }}
                       zIndex={10}
                       left={3}
                       pos={"absolute"}
@@ -67,8 +67,20 @@ export const CareerSection2 = () => {
                       {title}
                     </Text>
                   </Flex>
+                  <Divider
+                    borderColor={"#F05B2D"}
+                    pos={"absolute"}
+                    opacity={1}
+                    borderWidth={"2px"}
+                    bottom={0}
+                    borderRadius={"2px"}
+                    transition={"width 0.5s"}
+                    width={hovered === id ? "150px" : "39px"}
+                  />
                 </Box>
-                <Text fontSize={"16px"}>{description}</Text>
+                <Text fontSize={{ base: "14px", md: "16px" }}>
+                  {description}
+                </Text>
               </CardBody>
             </Card>
           ))}

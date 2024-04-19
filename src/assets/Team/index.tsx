@@ -1,8 +1,8 @@
-import Adarsha from "../../assets/teamImages/Adasrha.png";
-import IshworDeep from "../../assets/teamImages/Ishwor.png";
-import Sandip from "../../assets/teamImages/Sandip.png";
-import Saroj from "../../assets/teamImages/Saroj.png";
-import Sunil from "../../assets/teamImages/Sunil.png";
+import Adarsha from "../../assets/Team/teamImages/Adasrha.png";
+import IshworDeep from "../../assets/Team/teamImages/Ishwor.png";
+import Sandip from "../../assets/Team/teamImages/Sandip.png";
+import Saroj from "../../assets/Team/teamImages/Saroj.png";
+import Sunil from "../../assets/Team/teamImages/Sunil.png";
 
 export const teamInfo = [
   {

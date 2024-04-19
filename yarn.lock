@@ -1288,20 +1288,45 @@
   resolved "https://registry.yarnpkg.com/@eslint/js/-/js-8.57.0.tgz#a5417ae8427873f1dd08b70b3574b453e67b5f7f"
   integrity sha512-Ys+3g2TaW7gADOJzPt83SJtCDhMjndcDMFVQ/Tj9iA1BfJzFKD9mAUXT3OenpuPHbI6P/myECxRJrofUsDx/5g==
 
+"@fontsource-variable/inter-tight@^5.0.20":
+  version "5.0.20"
+  resolved "https://registry.yarnpkg.com/@fontsource-variable/inter-tight/-/inter-tight-5.0.20.tgz#0de90817f63775c60bebd5e3128db38083443248"
+  integrity sha512-HJH+9/ftH0+iIQoM59Gkx+C0dBJo9YS026W1e0RWF8Ra39lhXDBti8Pfh4F2m7eTcxmHx9wt/N0MvJ8hQObDmg==
+
+"@fontsource-variable/jost@^5.0.18":
+  version "5.0.18"
+  resolved "https://registry.yarnpkg.com/@fontsource-variable/jost/-/jost-5.0.18.tgz#61117d43c6b0e3c3e7055e74fb45d1d735b2f78f"
+  integrity sha512-HjW7Zfszf4Veb2ybgK68azRCT4yvX7NcY7wDBSICAyvRbnrbEmsNm2HWd1r13hG1YEyBYUdMjiZRkauHAFPQFw==
+
 "@fontsource-variable/karla@^5.0.20":
   version "5.0.20"
   resolved "https://registry.yarnpkg.com/@fontsource-variable/karla/-/karla-5.0.20.tgz#5247bc8048aeba89cd6329a846c3b34e7135a1d0"
   integrity sha512-dvE2hAWZeRz2R+hoxFe96U6ClSeb4eFz7KP0wPnNatLZ7O1cq6M52k9YrUlhnJlgBNqPqkxccUgZEW0ptSPC6g==
+
+"@fontsource-variable/kumbh-sans@^5.0.19":
+  version "5.0.19"
+  resolved "https://registry.yarnpkg.com/@fontsource-variable/kumbh-sans/-/kumbh-sans-5.0.19.tgz#5abf92b69eb196b6d93c3faa7f980e62d71a85fc"
+  integrity sha512-Zxl+kFs2mGOcLA44W5acxXgRKChN1mgYcL49ZhPuRmG6beq/MZe78btEf+E43BoJDOWOJ2YIAqxOSK2mH3KoMA==
 
 "@fontsource-variable/montserrat@^5.0.18":
   version "5.0.18"
   resolved "https://registry.yarnpkg.com/@fontsource-variable/montserrat/-/montserrat-5.0.18.tgz#12843d9b99524d8787e1b40b2e75248de527569e"
   integrity sha512-X7ZGaabqbPTOdouKkwF8KlAuHI9ypbKVYJN93T8GGjiMhs0+XqcXcYMNC282xuPLPCkl4fYSIug1wKKpXn/e9Q==
 
+"@fontsource-variable/recursive@^5.0.17":
+  version "5.0.17"
+  resolved "https://registry.yarnpkg.com/@fontsource-variable/recursive/-/recursive-5.0.17.tgz#a2636336e0882e4886138375a2db57644f7040ba"
+  integrity sha512-Sa8feviLaHgsikDZdMu+v59L/Bp6Cq1fOGoU8mnRBdHNkPZjcq0evbJGi8n3RwYLqwxma5J4WgQ6Tv4zWbf4HA==
+
 "@fontsource-variable/urbanist@^5.0.20":
   version "5.0.20"
   resolved "https://registry.yarnpkg.com/@fontsource-variable/urbanist/-/urbanist-5.0.20.tgz#bb834717092dea0cc0735691f73ddcb080a03c96"
   integrity sha512-4R0UW4wfxVMIjXt6L8/7ys4S8ufJvMnVikVeR2WkGe7E/TJeurh6ZFdaRgcfDvjEoyIzhv2n0DIJ0fNO+XaT0w==
+
+"@fontsource/balsamiq-sans@^5.0.19":
+  version "5.0.19"
+  resolved "https://registry.yarnpkg.com/@fontsource/balsamiq-sans/-/balsamiq-sans-5.0.19.tgz#56fe64829c956c6d829d7e150b4b2cfabbb39e3b"
+  integrity sha512-ALdkilJZBCy5LiTuMwP6QaL08PdUNAB51VL2FaoFcKIoT3TrB0piA1GMLrCvQSo0UVE0vFBjvPqRm5tV47p0NQ==
 
 "@humanwhocodes/config-array@^0.11.14":
   version "0.11.14"

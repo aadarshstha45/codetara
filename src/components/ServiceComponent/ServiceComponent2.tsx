@@ -18,7 +18,8 @@ export const ServiceComponent2 = () => {
     <Flex
       flexDir={"column"}
       pos={{ md: "fixed" }}
-      top={isAtTop ? 36 : 20}
+      top={isAtTop ? 24 : 18}
+      transition={"all 0.3s"}
       px={10}
       right={0}
       left={"50%"}
@@ -34,7 +35,7 @@ export const ServiceComponent2 = () => {
       </Text>
       <Text
         w={{ md: "350px", lg: "481px" }}
-        fontSize={{ base: "22px", sm: "24px", md: "26px", lg: "28px" }}
+        fontSize={{ base: "18px", sm: "20px", md: "22x", lg: "24px" }}
         fontWeight={450}
       >
         Engage with Code Tara, one of the leading Developers in Nepal!

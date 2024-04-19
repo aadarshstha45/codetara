@@ -1,8 +1,10 @@
+import Lisa from "../../assets/Testimonial/testimonialImages/man.png";
+import Ishwor from "../../assets/Testimonial/testimonialImages/profile.png";
 import {
   CustomerIcon,
   InnovationIcon,
   QualityIcon,
-} from "../../assets/homeImages/approachIcon";
+} from "./homeImages/approachIcon";
 import {
   AcmeLogo,
   ApexLogo,
@@ -10,7 +12,7 @@ import {
   EchoLogo,
   PulseLogo,
   QuantumLogo,
-} from "../../assets/homeImages/companyLogos";
+} from "./homeImages/companyLogos";
 import {
   ServiceIcon1,
   ServiceIcon2,
@@ -18,9 +20,7 @@ import {
   ServiceIcon4,
   ServiceIcon5,
   ServiceIcon6,
-} from "../../assets/homeImages/serviceIcons";
-import Lisa from "../../assets/testimonialImages/man.png";
-import Ishwor from "../../assets/testimonialImages/profile.png";
+} from "./homeImages/serviceIcons";
 export const approachData = [
   {
     id: 1,

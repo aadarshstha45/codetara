@@ -14,7 +14,7 @@ import {
 } from "@chakra-ui/react";
 
 import { FacebookIcon, InstagramIcon } from "../assets/icons/socialIcons";
-import { teamInfo } from "../data/TeamData";
+import { teamInfo } from "../assets/Team";
 
 export const OurTeam = () => {
   const [isLessThan750] = useMediaQuery("(max-width: 750px)");

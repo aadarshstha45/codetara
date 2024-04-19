@@ -8,9 +8,9 @@ import {
   SimpleGrid,
   Text,
 } from "@chakra-ui/react";
-import StarImage from "../../assets/homeImages/Star.png";
+import { companyLogo } from "../../assets/Home";
+import StarImage from "../../assets/Home/homeImages/Star.png";
 import { RightArrow } from "../../assets/icons";
-import { companyLogo } from "../../data/HomeData";
 
 export const HeroSection = () => {
   return (

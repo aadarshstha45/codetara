@@ -9,15 +9,15 @@ import {
   Link,
   Text,
 } from "@chakra-ui/react";
+import { ContactData } from "../../assets/Contact";
 import { UpRightArrow } from "../../assets/icons";
-import { ContactData } from "../../data/ContactData";
 
 export const Grid2 = () => {
   return (
     <Card borderRadius={0} shadow={"none"}>
       <CardBody gap={5} py={10} px={{ base: 8, sm: 12, md: 16, lg: 20 }}>
         <Text
-          fontSize={{ base: "28px", sm: "32px", md: "36px", lg: "40px" }}
+          fontSize={{ base: "24px", sm: "28px", md: "32px", lg: "36px" }}
           fontWeight={600}
         >
           Contact Us

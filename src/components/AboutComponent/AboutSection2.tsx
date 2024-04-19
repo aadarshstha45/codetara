@@ -10,7 +10,7 @@ import {
   Text,
   useMediaQuery,
 } from "@chakra-ui/react";
-import { aboutUs } from "../../data/AboutData";
+import { aboutUs } from "../../assets/About";
 
 export const AboutSection2 = () => {
   const [isLessThan1150] = useMediaQuery("(max-width: 1150px)");

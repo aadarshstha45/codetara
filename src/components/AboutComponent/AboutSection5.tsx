@@ -6,6 +6,7 @@ export const AboutSection5 = () => {
     <Box
       w={"full"}
       bgGradient="radial-gradient(573.86% 141.42% at 0% 0%, #000 0%, #0F172A 50%, #334155 100%)"
+      my={{ sm: 10, md: 20 }}
     >
       <Container maxW={{ base: "95vw", sm: "80vw" }}>
         <Flex justifyContent={"center"} py={{ base: 10, md: 20 }}>

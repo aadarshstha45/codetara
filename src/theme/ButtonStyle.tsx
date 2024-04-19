@@ -18,12 +18,21 @@ export const ButtonStyle = {
       borderRadius: "1px",
     },
     transparent: {
-      bg: "#FFFFFF",
-      color: "#253470",
+      bg: "transparent",
+      color: "#F05B2D",
       _hover: {
-        bg: "#FFFFFF",
+        bg: "transparent",
       },
-      border: "1px solid #253470",
+      padding: "0",
+      border: "none",
+      borderRadius: "1px",
+    },
+    white: {
+      bg: "#FFFFFF",
+      color: "#F05B2D",
+      _hover: {
+        bg: "#F9FAFC",
+      },
       borderRadius: "1px",
     },
   },

@@ -6,12 +6,12 @@ import {
   Container,
   Flex,
   GridItem,
-  Link,
   SimpleGrid,
   Text,
 } from "@chakra-ui/react";
+import { Link } from "react-router-dom";
+import { serviceData } from "../../assets/Home";
 import { RightArrow } from "../../assets/icons/";
-import { serviceData } from "../../data/HomeData";
 
 export const ServiceSection = () => {
   return (
@@ -69,6 +69,8 @@ export const ServiceSection = () => {
                       textDecor: "none",
                     }}
                     as={Link}
+                    to={"/services"}
+                    reloadDocument
                     align={"center"}
                     gap={1}
                     pt={4}

@@ -7,7 +7,7 @@ import {
   Mission,
   Testing,
   Vision,
-} from "../../assets/aboutImages";
+} from "./aboutImages";
 
 export const aboutUs = [
   {

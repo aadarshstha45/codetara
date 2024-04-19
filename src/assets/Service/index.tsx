@@ -5,7 +5,7 @@ import {
   ServiceIcon4,
   ServiceIcon5,
   ServiceIcon6,
-} from "../../assets/homeImages/serviceIcons";
+} from "../Home/homeImages/serviceIcons";
 
 export const ServiceData = [
   {

@@ -1,9 +1,9 @@
 import { Container, Flex, GridItem, SimpleGrid } from "@chakra-ui/react";
-import { WhiteLogo } from "../assets/logo";
-import { AboutSection } from "./FooterComponent/AboutSection";
-import { CareerSection } from "./FooterComponent/CareerSection";
-import { CompanySection } from "./FooterComponent/CompanySection";
-import { ServiceSection } from "./FooterComponent/ServiceSection";
+import { WhiteLogo } from "../../assets/logo";
+import { AboutSection } from "../FooterComponent/AboutSection";
+import { CareerSection } from "../FooterComponent/CareerSection";
+import { CompanySection } from "../FooterComponent/CompanySection";
+import { ServiceSection } from "../FooterComponent/ServiceSection";
 
 export const Footer = () => {
   return (

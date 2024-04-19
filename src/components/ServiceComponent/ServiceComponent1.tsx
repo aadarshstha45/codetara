@@ -1,6 +1,6 @@
 import { Box, Button, Card, CardBody, Flex, Text } from "@chakra-ui/react";
+import { ServiceData } from "../../assets/Service";
 import { RightArrow } from "../../assets/icons";
-import { ServiceData } from "../../data/ServiceData";
 
 export const ServiceComponent1 = () => {
   return (

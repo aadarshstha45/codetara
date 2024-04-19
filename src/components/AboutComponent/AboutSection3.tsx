@@ -1,5 +1,5 @@
 import { Container, Flex, Text, useMediaQuery } from "@chakra-ui/react";
-import { MVGData } from "../../data/AboutData";
+import { MVGData } from "../../assets/About";
 
 export const AboutSection3 = () => {
   const [isLessThan975] = useMediaQuery("(max-width: 975px)");

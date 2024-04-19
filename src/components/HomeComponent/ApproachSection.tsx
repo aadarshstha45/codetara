@@ -6,7 +6,7 @@ import {
   SimpleGrid,
   Text,
 } from "@chakra-ui/react";
-import { approachData } from "../../data/HomeData";
+import { approachData } from "../../assets/Home";
 
 export const ApproachSection = () => {
   return (

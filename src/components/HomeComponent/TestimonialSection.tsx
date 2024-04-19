@@ -16,9 +16,9 @@ import "swiper/swiper-bundle.css";
 
 import { Autoplay, EffectFade } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
+import { testimonialData } from "../../assets/Home";
 import { LeftQuote, RightQuote } from "../../assets/icons/quote";
 import { BlackLogo } from "../../assets/logo";
-import { testimonialData } from "../../data/HomeData";
 
 export const TestimonialSection = () => {
   return (
@@ -36,11 +36,12 @@ export const TestimonialSection = () => {
       >
         {testimonialData?.map(
           ({ id, bgColor, message, name, designation, image }) => (
-            <SwiperSlide key={id}>
+            <SwiperSlide key={id} className="swiper-slide">
               <Card
                 borderRadius={0}
                 shadow={"none"}
                 p={4}
+                h={"400px"}
                 bgColor={bgColor}
                 pos={"relative"}
               >
@@ -58,7 +59,12 @@ export const TestimonialSection = () => {
                 >
                   <Text
                     noOfLines={{ base: 5, md: 100 }}
-                    fontSize={{ base: "16px", md: "24px" }}
+                    fontSize={{
+                      base: "18px",
+                      sm: "20px",
+                      md: "22px",
+                      lg: "24px",
+                    }}
                     fontWeight={400}
                   >
                     {message}

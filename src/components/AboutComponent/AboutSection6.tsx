@@ -13,8 +13,8 @@ import { Autoplay, Pagination } from "swiper/modules";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/swiper-bundle.css";
+import { teamInfo } from "../../assets/Team";
 import { FacebookIcon, InstagramIcon } from "../../assets/icons/socialIcons";
-import { teamInfo } from "../../data/TeamData";
 
 export const AboutSection6 = () => {
   return (
