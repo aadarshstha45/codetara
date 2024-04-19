@@ -8,23 +8,32 @@ import {
   Flex,
   Text,
 } from "@chakra-ui/react";
+import { yupResolver } from "@hookform/resolvers/yup";
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { UpRightArrow } from "../../assets/icons";
+import { ApplicationSchema } from "../../utils/schema";
 import DropzoneComponent from "../FormComponents/DropzoneComponent";
 import { TextInput } from "../FormComponents/TextInput";
 export const CareerForm = () => {
   const [file, setFile] = useState<File | null>(null);
   const [errorMessage, setErrorMessage] = useState<string>("");
-  const { control, handleSubmit } = useForm({
+  const {
+    control,
+    handleSubmit,
+    reset,
+    formState: { errors },
+  } = useForm({
     defaultValues: {
       firstName: "",
       lastName: "",
       email: "",
       phone: "",
       github: "",
-      file: null,
+      file: undefined,
     },
+    resolver: yupResolver(ApplicationSchema),
+    mode: "onChange",
   });
 
   const onSubmit = async (data: any) => {
@@ -36,6 +45,8 @@ export const CareerForm = () => {
     console.log({
       data,
     });
+    reset();
+    setFile(null);
   };
 
   const handleDrop = (acceptedFiles: File[]) => {
@@ -85,24 +96,38 @@ export const CareerForm = () => {
                   more information.
                 </Text>
               </Flex>
-              <form onSubmit={handleSubmit(onSubmit)}>
+              <form onSubmit={handleSubmit(onSubmit)} noValidate>
                 <TextInput
+                  errors={errors}
+                  isRequired
                   control={control}
                   label={"First Name"}
                   name={"firstName"}
                 />
                 <TextInput
+                  errors={errors}
+                  isRequired
                   control={control}
                   label={"Last Name"}
                   name={"lastName"}
                 />
-                <TextInput control={control} label={"Email"} name={"email"} />
                 <TextInput
+                  errors={errors}
+                  isRequired
+                  control={control}
+                  label={"Email"}
+                  name={"email"}
+                />
+                <TextInput
+                  errors={errors}
+                  isRequired
                   control={control}
                   label={"Phone Number"}
                   name={"phone"}
                 />
                 <DropzoneComponent
+                  errors={errors}
+                  isRequired
                   control={control}
                   name="file"
                   file={file}
@@ -112,6 +137,7 @@ export const CareerForm = () => {
                   message={errorMessage}
                 />
                 <TextInput
+                  errors={errors}
                   control={control}
                   label={"Github Link"}
                   name={"github"}
@@ -119,9 +145,12 @@ export const CareerForm = () => {
                 <Button
                   type="submit"
                   variant={"transparent"}
-                  rightIcon={<UpRightArrow />}
+                  border={"1px solid #253470"}
+                  color={"#253470"}
+                  rightIcon={<UpRightArrow stroke="#253470" />}
+                  px={2}
                 >
-                  Submit
+                  Apply
                 </Button>
               </form>
             </CardBody>

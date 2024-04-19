@@ -51,8 +51,13 @@ export default function DropzoneComponent({
       <Controller
         name={name}
         control={control}
-        render={() => (
-          <Dropzone onDrop={onDrop}>
+        render={({ field }) => (
+          <Dropzone
+            onDrop={(acceptedFiles) => {
+              field.onChange(acceptedFiles[0]); // Update form controller value
+              onDrop && onDrop(acceptedFiles);
+            }}
+          >
             {({ getRootProps, getInputProps }) => (
               <Flex
                 minH={40}
@@ -147,6 +152,7 @@ export default function DropzoneComponent({
                       onClick={(event) => {
                         event.stopPropagation();
                         onDelete();
+                        field.onChange(null);
                       }}
                     />
                   </Flex>

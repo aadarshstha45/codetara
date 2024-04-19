@@ -1,17 +1,31 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import { FormControl, FormLabel, Input } from "@chakra-ui/react";
-import { Control, Controller } from "react-hook-form";
+import {
+  FormControl,
+  FormHelperText,
+  FormLabel,
+  Input,
+} from "@chakra-ui/react";
+import { Control, Controller, FieldErrors } from "react-hook-form";
 
 type InputProps = {
   label: string;
   control: Control<any>;
   name: string;
   type?: string;
+  isRequired?: boolean;
+  errors: FieldErrors;
 };
 
-export const TextInput = ({ label, control, name, type }: InputProps) => {
+export const TextInput = ({
+  label,
+  control,
+  name,
+  type,
+  isRequired,
+  errors,
+}: InputProps) => {
   return (
-    <FormControl mb={8}>
+    <FormControl mb={8} isRequired={isRequired}>
       <FormLabel fontSize={{ sm: "16px", md: "18px" }} fontWeight={450}>
         {label}
       </FormLabel>
@@ -30,6 +44,11 @@ export const TextInput = ({ label, control, name, type }: InputProps) => {
           />
         )}
       />
+      {errors[name] && (
+        <FormHelperText color="red" fontSize="14px" fontWeight={450}>
+          {(errors[name] as any).message}
+        </FormHelperText>
+      )}
     </FormControl>
   );
 };
