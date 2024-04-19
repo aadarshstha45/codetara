@@ -40,7 +40,7 @@ export const Navbar = () => {
     >
       <Container maxW={isLessThan1250 ? "99vw" : "90vw"}>
         <Flex py={4} justify={"space-between"} align={"center"}>
-          <Box onClick={() => navigate("/")}>
+          <Box cursor={"pointer"} onClick={() => navigate("/")}>
             <DefaultLogo />
           </Box>
           <HStack gap={6} display={isLessThan800 ? "none" : "flex"}>
