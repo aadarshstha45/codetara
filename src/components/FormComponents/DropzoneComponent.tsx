@@ -166,7 +166,7 @@ export default function DropzoneComponent({
         <FormHelperText
           color={colorMode === "light" ? "gray.800" : "gray.100"}
           fontSize="sm"
-          textColor={"red.400"}
+          textColor={"red.500"}
           fontStyle={"italic"}
         >
           {message}
@@ -183,7 +183,7 @@ export default function DropzoneComponent({
         </FormHelperText>
       )}
       {errors && (
-        <FormHelperText color="red.500">
+        <FormHelperText color="red.500" fontStyle={"italic"}>
           {(errors[name] as any)?.message}
         </FormHelperText>
       )}

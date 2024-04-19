@@ -45,7 +45,12 @@ export const TextInput = ({
         )}
       />
       {errors[name] && (
-        <FormHelperText color="red" fontSize="14px" fontWeight={450}>
+        <FormHelperText
+          color="red"
+          fontSize="14px"
+          fontStyle={"italic"}
+          fontWeight={450}
+        >
           {(errors[name] as any).message}
         </FormHelperText>
       )}
