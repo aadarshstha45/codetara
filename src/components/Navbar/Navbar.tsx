@@ -18,7 +18,7 @@ import {
 } from "@chakra-ui/react";
 
 import { HamburgerIcon } from "@chakra-ui/icons";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import { navItems } from ".";
 import { DefaultLogo } from "../../assets/logo";
 
@@ -26,7 +26,7 @@ export const Navbar = () => {
   const [isLessThan1250] = useMediaQuery("(max-width: 1250px)");
   const { isOpen, onOpen, onClose } = useDisclosure();
   const [isLessThan800] = useMediaQuery("(max-width: 800px)");
-
+  const navigate = useNavigate();
   return (
     <Container
       maxW={"100vw"}
@@ -40,18 +40,20 @@ export const Navbar = () => {
     >
       <Container maxW={isLessThan1250 ? "99vw" : "90vw"}>
         <Flex py={4} justify={"space-between"} align={"center"}>
-          <DefaultLogo />
-
+          <Box onClick={() => navigate("/")}>
+            <DefaultLogo />
+          </Box>
           <HStack gap={6} display={isLessThan800 ? "none" : "flex"}>
             {navItems.map(({ id, label, to }) => (
               <Box key={id}>
                 {to === "/contact" ? (
                   <Button
-                    as={Link}
-                    href={to}
-                    _hover={{ textDecoration: "none" }}
-                    textDecor={"none"}
-                    variant={"primary"}
+                    as={NavLink}
+                    to={"/contact"}
+                    reloadDocument
+                    p={"8px"}
+                    borderRadius={"1px"}
+                    variant="primary"
                   >
                     Let's Talk
                   </Button>
@@ -59,17 +61,17 @@ export const Navbar = () => {
                   <Link
                     as={NavLink}
                     fontSize={isLessThan1250 ? "14px" : "20px"}
-                    borderBottom={"4px"}
-                    borderBottomWidth={"4px"}
+                    borderBottom={"2px"}
+                    borderBottomWidth={"2px"}
                     borderBottomColor={"transparent"}
                     bgPosition="right bottom"
                     _hover={{
-                      borderBottomWidth: "4px",
+                      borderBottomWidth: "2px",
                       borderBottomColor: "primary",
                     }}
                     _activeLink={{
                       borderBottomColor: "primary",
-                      borderBottomWidth: "4px",
+                      borderBottomWidth: "2px",
                     }}
                     key={id}
                     to={to}
@@ -115,30 +117,30 @@ export const Navbar = () => {
                     <Box key={id}>
                       {to === "/contact" ? (
                         <Button
-                          as={Link}
-                          href={to}
-                          _hover={{ textDecoration: "none" }}
-                          textDecor={"none"}
-                          variant={"primary"}
-                          onClick={onClose}
+                          as={NavLink}
+                          to={"/contact"}
+                          reloadDocument
+                          p={"8px"}
+                          borderRadius={"1px"}
+                          variant="primary"
                         >
                           Let's Talk
                         </Button>
                       ) : (
                         <Link
                           as={NavLink}
-                          borderBottom={"4px"}
-                          borderBottomWidth={"4px"}
+                          borderBottom={"2px"}
+                          borderBottomWidth={"2px"}
                           borderBottomColor={"transparent"}
                           bgPosition="right bottom"
                           onClick={onClose}
                           _hover={{
-                            borderBottomWidth: "4px",
+                            borderBottomWidth: "2px",
                             borderBottomColor: "primary",
                           }}
                           _activeLink={{
                             borderBottomColor: "primary",
-                            borderBottomWidth: "4px",
+                            borderBottomWidth: "2px",
                           }}
                           key={id}
                           to={to}

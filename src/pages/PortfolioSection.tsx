@@ -5,14 +5,15 @@ import {
   CardBody,
   Flex,
   Image,
+  SimpleGrid,
   Text,
   useMediaQuery,
 } from "@chakra-ui/react";
 import { motion } from "framer-motion";
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { PortfolioData } from "../../assets/Portfolio";
-import { UpRightArrow } from "../../assets/icons";
+import { PortfolioData } from "../assets/Portfolio";
+import { UpRightArrow } from "../assets/icons";
 
 export const PortfolioSection = () => {
   const [clicked, setClicked] = useState<number | null>(1);
@@ -43,17 +44,19 @@ export const PortfolioSection = () => {
           View Our Works
         </Button>
       </Box>
-      <Box pos={"relative"} h={{ base: 450, md: 600 }}>
+      <Box pos={"relative"} h={600}>
         {PortfolioData.map(
           ({
             id,
             title,
+
             image,
             bgColor,
             slug,
             description,
-
+            technology,
             textColor,
+            headingTextColor,
           }) => (
             <Card
               cursor={"pointer"}
@@ -231,46 +234,46 @@ export const PortfolioSection = () => {
                       alt={title}
                     />
                   </Box>
+
+                  <SimpleGrid
+                    pos={"absolute"}
+                    opacity={0}
+                    transition={"transform 0.5s"}
+                    justifySelf={"center"}
+                    columns={2}
+                    spacing={10}
+                  >
+                    {technology.map(({ id, name, value }) => (
+                      <Flex flexDir={"column"} key={id}>
+                        <Text
+                          textColor={headingTextColor}
+                          fontSize={{
+                            base: "18px",
+                            sm: "20px",
+                            md: "24px",
+                            lg: "28px",
+                          }}
+                          fontWeight={450}
+                          lineHeight={"normal"}
+                        >
+                          {name}
+                        </Text>
+                        <Text
+                          textColor={textColor}
+                          fontSize={{ base: "14px", md: "16px" }}
+                          fontWeight={400}
+                          lineHeight={"normal"}
+                        >
+                          {value}
+                        </Text>
+                      </Flex>
+                    ))}
+                  </SimpleGrid>
                 </Flex>
               </CardBody>
             </Card>
           )
         )}
-      </Box>
-      <Box pos={"relative"} h={{ base: 450, md: 600 }}>
-        {Array.from({ length: 3 }).map((_, index) => (
-          <Card
-            key={index}
-            p={4}
-            h={{
-              base: index === 0 ? "300px" : index === 1 ? "350px" : "400px",
-              md: index === 0 ? "500px" : index === 1 ? "551px" : "600px",
-            }}
-            w={
-              isLargerThan1230
-                ? index === 0
-                  ? "500px"
-                  : index === 1
-                  ? "550px"
-                  : index === 2
-                  ? "600px"
-                  : "500px"
-                : {
-                    base:
-                      index === 0 ? "200px" : index === 1 ? "250px" : "300px",
-                    sm: index === 0 ? "300px" : index === 1 ? "350px" : "400px",
-                  }
-            }
-            bg={index === 0 ? "#E8E8E8" : index === 1 ? "#D9D9D9" : "#BFBFBF"}
-            shadow={"none"}
-            borderRadius={0}
-            borderTopLeftRadius={"275px"}
-            pos={"absolute"}
-            top={index === 0 ? "100px" : index === 1 ? "49px" : 0}
-            right={0}
-            zIndex={index === 0 ? 2 : index === 1 ? 1 : 0}
-          ></Card>
-        ))}
       </Box>
     </Box>
   );

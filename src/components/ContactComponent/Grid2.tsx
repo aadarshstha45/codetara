@@ -6,9 +6,9 @@ import {
   CardBody,
   Divider,
   Flex,
-  Link,
   Text,
 } from "@chakra-ui/react";
+import { Link } from "react-router-dom";
 import { ContactData } from "../../assets/Contact";
 import { UpRightArrow } from "../../assets/icons";
 
@@ -32,7 +32,7 @@ export const Grid2 = () => {
               target="_blank"
               _hover={{ textDecoration: "none" }}
               as={Link}
-              href={link}
+              to={link}
               gap={5}
               align={"center"}
               justify={"start"}
@@ -59,6 +59,8 @@ export const Grid2 = () => {
             If you have any questions we'll reach out to you promptly.
           </Text>
           <Button
+            as={Link}
+            to={"/careers"}
             p={0}
             variant={"transparent"}
             color={"primary"}
@@ -83,6 +85,8 @@ export const Grid2 = () => {
             variant={"transparent"}
             color={"primary"}
             p={0}
+            as={Link}
+            to={"/careers"}
             rightIcon={<UpRightArrow stroke="#F05B2D" />}
             border={"none"}
           >

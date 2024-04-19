@@ -81,7 +81,8 @@ export const Portfolio = () => {
                   overflow={"hidden"}
                   bg={hoveredCard === id ? hoveredBgColor : bgColor}
                   transition={"background-color 1s"}
-                  onTouchStart={() => handleToggleHover(id)}
+                  // onTouchStart={() => handleToggleHover(id)}
+                  onTouchStartCapture={() => handleToggleHover(id)}
                   onMouseEnter={() => handleToggleHover(id)}
                   onMouseLeave={() => handleToggleHover(id)}
                   shadow={"none"}

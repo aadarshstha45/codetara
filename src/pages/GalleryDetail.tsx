@@ -1,11 +1,14 @@
-import { Box, Flex, GridItem, Text } from "@chakra-ui/react";
+import { Box, Button, Flex, GridItem, Text } from "@chakra-ui/react";
+import { createBrowserHistory } from "history";
 import { useParams } from "react-router-dom";
 import { GalleryData } from "../assets/Gallery";
+import { LeftArrow } from "../assets/icons";
 
 export const GalleryDetail = () => {
   const { slug } = useParams();
   const data = GalleryData.find((item) => item.slug === slug);
-  console.log(data);
+  const history = createBrowserHistory();
+
   return (
     <Flex flexDir={"column"}>
       <Box
@@ -20,9 +23,25 @@ export const GalleryDetail = () => {
           justify={"center"}
           align={"center"}
           h={"full"}
+          pos={"relative"}
           flexDir={"column"}
           bg={"rgba(0,0,0,0.5)"}
         >
+          <Button
+            // size={{ base: "xs", sm: "sm", md: "md" }}
+
+            left={5}
+            top={5}
+            fontSize={"sm"}
+            w={"fit-content"}
+            variant={"transparent"}
+            leftIcon={<LeftArrow stroke="white" />}
+            onClick={() => history.back()}
+            color={"white"}
+            pos={"absolute"}
+          >
+            Back to gallery
+          </Button>
           <Text
             color={"white"}
             fontSize={{ base: "30px", sm: "36px", md: "42px", lg: "48px" }}

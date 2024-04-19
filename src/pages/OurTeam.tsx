@@ -21,7 +21,7 @@ export const OurTeam = () => {
   return (
     <Flex flexDir={"column"}>
       <Box bgGradient={"linear-gradient(270deg, #E0C3E8 0%, #C1CAEF 100%);"}>
-        <Container maxW={{ base: "95vw", md: "85vw" }} py={5}>
+        <Container maxW={{ base: "95vw", md: "90vw" }} py={16}>
           <Flex
             justify={"center"}
             gap={isLessThan750 ? 5 : 20}

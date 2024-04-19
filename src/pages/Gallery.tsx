@@ -55,11 +55,13 @@ export const Gallery = () => {
           spacing={isLessThan700 ? 10 : 5}
           justifyItems={"center"}
         >
-          {GalleryData.map(({ id, title, slug, date, thumbnail, images }) => (
+          {GalleryData?.map(({ id, title, slug, date, thumbnail, images }) => (
             <GridItem
               key={id}
-              colSpan={1}
-              w={isLessThan700 ? "100%" : "80%"}
+              colSpan={GalleryData.length < 2 ? 2 : 1}
+              w={
+                isLessThan700 ? "100%" : GalleryData.length < 2 ? "40%" : "80%"
+              }
               borderRadius={"10px"}
             >
               <Flex flexDir={"column"} gap={1}>

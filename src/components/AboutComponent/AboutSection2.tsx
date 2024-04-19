@@ -47,7 +47,7 @@ export const AboutSection2 = () => {
                   index === aboutUs.length - 1 ? "0.5px solid #000" : ""
                 }
               >
-                <AccordionButton p={"20px 0px"}>
+                <AccordionButton p={"10px 0px"}>
                   <Box
                     as="span"
                     flex="1"

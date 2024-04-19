@@ -8,6 +8,7 @@ import {
   SimpleGrid,
   Text,
 } from "@chakra-ui/react";
+import { Link } from "react-router-dom";
 import { companyLogo } from "../../assets/Home";
 import StarImage from "../../assets/Home/homeImages/Star.png";
 import { RightArrow } from "../../assets/icons";
@@ -50,6 +51,9 @@ export const HeroSection = () => {
                 Solutions for Rapid Growth of business development
               </Text>
               <Button
+                as={Link}
+                to={"/contact"}
+                reloadDocument
                 size={"sm"}
                 p={"8px"}
                 rightIcon={<RightArrow stroke="white" />}

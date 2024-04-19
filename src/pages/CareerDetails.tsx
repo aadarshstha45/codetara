@@ -21,12 +21,11 @@ import { CareerDetailSection1 } from "../components/CareerDetailComponent";
 
 export const CareerDetails = () => {
   const { id } = useParams();
-  console.log(id);
+
   const history = createBrowserHistory();
   const navigate = useNavigate();
 
   const data = PositionData.find((item) => item.id === parseInt(id!));
-  console.log(data);
 
   return (
     <Flex flexDir={"column"}>

@@ -10,6 +10,7 @@ import { GalleryDetail } from "../pages/GalleryDetail";
 import Home from "../pages/Home";
 import { OurTeam } from "../pages/OurTeam";
 import { Portfolio } from "../pages/Portfolio";
+import { PortfolioSection } from "../pages/PortfolioSection";
 import { Services } from "../pages/Services";
 
 export const router = createBrowserRouter([
@@ -70,6 +71,10 @@ export const router = createBrowserRouter([
             element: <GalleryDetail />,
           },
         ],
+      },
+      {
+        path: "/portfolioSection",
+        element: <PortfolioSection />,
       },
     ],
   },
