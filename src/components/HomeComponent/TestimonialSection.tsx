@@ -30,7 +30,7 @@ export const TestimonialSection = () => {
         slidesPerView={1}
         loop={true}
         autoplay={{
-          delay: 4000,
+          delay: 5000,
         }}
         modules={[Autoplay, EffectFade]}
       >
@@ -65,6 +65,7 @@ export const TestimonialSection = () => {
                       md: "22px",
                       lg: "24px",
                     }}
+                    textAlign={"center"}
                     fontWeight={400}
                   >
                     {message}

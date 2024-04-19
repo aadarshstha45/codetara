@@ -14,6 +14,7 @@
     "@chakra-ui/react": "^2.8.2",
     "@emotion/react": "^11.11.4",
     "@emotion/styled": "^11.11.5",
+    "@fancyapps/ui": "^5.0.36",
     "@fontsource-variable/inter-tight": "^5.0.20",
     "@fontsource-variable/jost": "^5.0.18",
     "@fontsource-variable/karla": "^5.0.20",
@@ -32,7 +33,9 @@
     "react-router-dom": "^6.22.3",
     "react-scroll": "^1.9.0",
     "swiper": "^11.1.1",
-    "yup": "^1.4.0"
+    "yet-another-react-lightbox": "^3.17.3",
+    "yup": "^1.4.0",
+    "zustand": "^4.5.2"
   },
   "devDependencies": {
     "@types/react": "^18.2.66",
