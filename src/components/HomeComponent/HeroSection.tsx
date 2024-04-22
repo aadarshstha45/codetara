@@ -15,7 +15,7 @@ import { RightArrow } from "../../assets/icons";
 
 export const HeroSection = () => {
   return (
-    <Container maxW={{ base: "95vw", sm: "85vw" }}>
+    <Container maxW={{ base: "95vw", sm: "85vw" }} py={20}>
       <Flex
         justify={"start"}
         flexDir={"column"}

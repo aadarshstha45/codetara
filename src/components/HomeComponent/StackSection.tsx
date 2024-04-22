@@ -12,7 +12,7 @@ import { Link } from "react-router-dom";
 import Languages from "../../assets/Home/homeImages/Language.png";
 export const StackSection = () => {
   return (
-    <Container maxW={{ base: "95vw", sm: "85vw" }}>
+    <Container maxW={{ base: "95vw", sm: "85vw" }} py={10}>
       <Flex flexDirection={"column"}>
         <Flex gap={10} py={20} align={"center"} flexWrap={"wrap"}>
           <SimpleGrid columns={{ base: 1, lg: 2 }} spacing={10}>
