@@ -15,7 +15,7 @@ import "swiper/css";
 import "swiper/swiper-bundle.css";
 
 import { LeftQuote, RightQuote } from "@/assets/QuoteIcon";
-import { BlackLogo } from "@/assets/logo";
+import { DefaultLogo } from "@/assets/logo";
 import { testimonialData } from "@/staticData";
 import { Autoplay, EffectFade } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -47,7 +47,7 @@ const TestimonialSection = () => {
               >
                 <CardHeader alignSelf={"center"}>
                   <Heading>
-                    <BlackLogo />
+                    <DefaultLogo />
                     {/* <Logo /> */}
                     {/* <WhiteLogo /> */}
                   </Heading>

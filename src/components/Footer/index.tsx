@@ -1,19 +1,23 @@
-import { WhiteLogo } from "@/assets/logo";
+import { DefaultLogo } from "@/assets/logo";
 import { Container, Flex, GridItem, SimpleGrid } from "@chakra-ui/react";
 import { About, Career, Company, Service } from "./FooterSection";
 
 function Footer() {
   return (
-    <Container bg={"secondary.400"} maxW={"100vw"} py={5}>
+    <Container
+      bg={"#d9d9d9 "}
+      borderTop={"1px solid #d9d9d9"}
+      maxW={"100vw"}
+      py={5}
+    >
       <Flex
         display={{ base: "flex", md: "none" }}
         justify={"center"}
         align={"center"}
         mb={4}
         py={5}
-        bg={"secondary.400"}
       >
-        <WhiteLogo />
+        <DefaultLogo />
       </Flex>
       <SimpleGrid
         columns={{ base: 2, sm: 2, lg: 4 }}

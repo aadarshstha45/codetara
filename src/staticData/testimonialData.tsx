@@ -6,7 +6,7 @@ export const testimonialData = [
   {
     id: 1,
     name: "Sandip Silwal",
-    designation: "CEO, Code Tara",
+    designation: "CEO, Info Wave Solution",
     message:
       "As the CEO, I am proud to say that our company has been instrumental in driving our growth and success. It has empowered our team to innovate, collaborate, and deliver exceptional solutions to our clients.",
     bgColor: "#87CEEB",
@@ -15,9 +15,9 @@ export const testimonialData = [
   {
     id: 2,
     name: "Sunil Pathak",
-    designation: "MD, Code Tara",
+    designation: "MD, Info Wave Solution",
     message:
-      "Code Tara has become an indispensable asset for our team. It has streamlined our project management process and boosted our productivity.",
+      "Info Wave Solution has become an indispensable asset for our team. It has streamlined our project management process and boosted our productivity.",
     bgColor: "#FFD700",
     image: Sunil,
   },
@@ -26,7 +26,7 @@ export const testimonialData = [
     name: "Ishwor Deep",
     designation: "Software Developer",
     message:
-      "Code Tara has revolutionized our approach to software development. It has helped us deliver high-quality products to our clients on time and within budget.",
+      "Info Wave Solution has revolutionized our approach to software development. It has helped us deliver high-quality products to our clients on time and within budget.",
 
     bgColor: "#F5F5DC",
     image: Ishwor,

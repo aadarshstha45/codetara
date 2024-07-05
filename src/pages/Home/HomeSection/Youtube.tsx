@@ -8,7 +8,7 @@ const Youtube = () => {
           fontSize={{ base: "20px", sm: "24px", md: "28px", lg: "32px" }}
           fontWeight={600}
         >
-          Unveiling Code Tara: Redefining Tomorrow's Software
+          Unveiling Info Wave Solution: Redefining Tomorrow's Software
         </Text>
         <Text fontSize={"16px"} fontWeight={400} mt={2}>
           Discover Innovation, Precision, and the Future of Technology.

@@ -21,7 +21,7 @@ const Careers = () => {
             textColor={"secondary"}
             textTransform={"capitalize"}
           >
-            Unlock Your Potential with Code Tara
+            Unlock Your Potential with Info Wave Solution
           </Text>
           <Text
             textAlign={"center"}

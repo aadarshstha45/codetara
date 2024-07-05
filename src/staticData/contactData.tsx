@@ -12,8 +12,8 @@ export const contactData = [
     id: 2,
     title: "Email",
     icon: <EmailIcon fill="#F05B2D" width="25px" height="25px" />,
-    body: "info@codetara.com",
-    link: "mailto:info@codetara.com",
+    body: "info@wavesolution.com",
+    link: "mailto:info@wavesolution.com",
   },
   {
     id: 3,

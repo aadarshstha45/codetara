@@ -6,7 +6,7 @@ export const Company = () => {
 
   return (
     <Flex flexDir={"column"} gap={"10px"}>
-      <Text fontWeight={450} color={"white"} fontSize={"20px"}>
+      <Text fontWeight={450} fontSize={"20px"}>
         Company
       </Text>
       <Stack gap={"12px"} w={"fit-content"}>
@@ -20,7 +20,6 @@ export const Company = () => {
             }}
             as={Link}
             href={href}
-            color={"white"}
             fontSize={isLessThan300 ? "14px" : "16px"}
           >
             {title}

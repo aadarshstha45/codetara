@@ -62,12 +62,12 @@ const Section1 = () => {
                 With a customer-centric approach, they prioritize success,
                 ensuring maximum value and impact for each project. Their team's
                 diverse expertise spans software development, digital marketing,
-                and cybersecurity. Code Tara upholds the highest standards of
-                quality, earning a strong reputation for excellence. Agile and
-                adaptive, they evolve offerings to meet ever-changing digital
-                demands. Overall, Code Tara shines for its innovation, customer
-                focus, expertise, commitment to excellence, adaptability, and
-                stellar reputation.
+                and cybersecurity. Info Wave Solution upholds the highest
+                standards of quality, earning a strong reputation for
+                excellence. Agile and adaptive, they evolve offerings to meet
+                ever-changing digital demands. Overall, Info Wave Solution
+                shines for its innovation, customer focus, expertise, commitment
+                to excellence, adaptability, and stellar reputation.
               </Text>
               {isLessThan1165 && (
                 <Button

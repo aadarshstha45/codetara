@@ -7,7 +7,6 @@ import {
   ServiceSection,
   StackSection,
   TestimonialSection,
-  Youtube,
 } from "./HomeSection";
 
 export default function Home() {
@@ -18,7 +17,7 @@ export default function Home() {
       <ApproachSection />
       <ServiceSection />
       <PortfolioSection />
-      <Youtube />
+      {/* <Youtube /> */}
       <TestimonialSection />
       <Map />
     </>

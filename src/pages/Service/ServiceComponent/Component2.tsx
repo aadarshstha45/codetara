@@ -38,7 +38,7 @@ const Component2 = () => {
         fontSize={{ base: "18px", sm: "20px", md: "22x", lg: "24px" }}
         fontWeight={450}
       >
-        Engage with Code Tara, one of the leading Developers in Nepal!
+        Engage with Info Wave Solution, one of the leading Developers in Nepal!
       </Text>
       <Text fontSize={{ base: "16px", md: "18px" }} fontWeight={400}>
         Your destination for innovative tech solutions. We specialize in custom
